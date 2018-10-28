@@ -1,0 +1,8 @@
+db-khc:
+  image: postgres
+  environment:
+    POSTGRES_USER: embassy
+    POSTGRES_PASSWORD: embassy
+    POSTGRES_DATABASE: embassy
+  ports:
+    - 5434:5432
