@@ -9,6 +9,5 @@
   "website": "https://www.kenyahighcom.org.my/",
   "repository": "https://github.com/ramayall/embassy-my-service.git",
   "logo": "hhttps://res.cloudinary.com/dpnxlc0jh/image/upload/v1522741320/coatofarms_kenya_yzv9jg.png",
-  "success_url": "/",
   "image": "heroku/java"
 }
