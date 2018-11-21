@@ -1,6 +1,7 @@
 package com.busyunit.embassy.service.controller;
 
 import com.busyunit.embassy.service.model.Company;
+import com.busyunit.embassy.service.resource.CompanyResource;
 import com.busyunit.embassy.service.service.CompanyService;
 
 import org.springframework.hateoas.Link;

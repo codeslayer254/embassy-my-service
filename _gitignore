@@ -39,11 +39,6 @@ internal/*.iml
 .project
 .settings/
 
-### IntelliJ IDEA ###
-.idea/
-*.iml
-*.iws
-
 # Mac
 .DS_Store
 

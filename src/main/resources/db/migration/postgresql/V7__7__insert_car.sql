@@ -23,6 +23,17 @@ INSERT INTO DEPARTMENT(ID, NAME, COMPANY_ID) VALUES (3, 'Administration', 1);
 INSERT INTO DEPARTMENT(ID, NAME, COMPANY_ID) VALUES (4, 'Human Resources', 2);
 INSERT INTO DEPARTMENT(ID, NAME, COMPANY_ID) VALUES (5, 'Sales & Marketing', 3);
 
-INSERT INTO EMPLOYEE(ID, NAME, SURNAME, ADDRESS_ID, DEPARTMENT_ID) VALUES (1, 'John', 'William', 1, 1);
-INSERT INTO EMPLOYEE(ID, NAME, SURNAME, ADDRESS_ID, DEPARTMENT_ID) VALUES (2, 'Robert', 'James', 2, 2);
-INSERT INTO EMPLOYEE(ID, NAME, SURNAME, ADDRESS_ID, DEPARTMENT_ID) VALUES (3, 'Donald', 'Tyler', 3, 3);
+INSERT INTO CATEGORY(ID, NAME) VALUES (1, 'DIPLOMATIC');
+INSERT INTO CATEGORY(ID, NAME) VALUES (2, 'LOCAL STAFF');
+
+INSERT INTO EMPLOYEE(ID, TITLE, NAME, SURNAME, EMPLOYEE_TITLE, BIO, IMAGE_NAME, ADDRESS_ID, DEPARTMENT_ID,  CATEGORY_ID, EXTENSION)
+VALUES (uuid_generate_v4(), 'Ms','Dorcas', 'Rukunga', 'CHARGÉ D’AFFAIRES', 'Chargé D’Affaires a.i (Malaysia, The Philippines, Indonesia & Brunei)', 'images/staff/dorcas.jpg', 1, 1, 1, '{"data":{ "facebook": "Fanta Orange", "instagram": "Coca-Cola", "linkedin": "Bottle", "email": "1.5l"}}');
+
+INSERT INTO EMPLOYEE(ID, TITLE, NAME, SURNAME, EMPLOYEE_TITLE, BIO, IMAGE_NAME, ADDRESS_ID, DEPARTMENT_ID,  CATEGORY_ID, EXTENSION)
+VALUES (uuid_generate_v4(), 'Ms','Mutero', 'Mutero', 'FINANCIAL ATTACHÉ', 'Financial Affairs', 'images/staff/Hanna-300x300.jpg', 1, 1, 1, '{"data":{ "facebook": "Fanta Orange", "instagram": "Coca-Cola", "linkedin": "Bottle", "email": "1.5l"}}');
+
+INSERT INTO EMPLOYEE(ID, TITLE, NAME, SURNAME, EMPLOYEE_TITLE, BIO, IMAGE_NAME, ADDRESS_ID, DEPARTMENT_ID,  CATEGORY_ID, EXTENSION)
+VALUES (uuid_generate_v4(), 'Ms','Ruth', 'Kitonyi', 'FIRST SECRETARY', 'First Secretary', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1541939384/ruth_khc_kl_mi8qd3.png', 1, 1, 1, '{"data":{ "facebook": "Fanta Orange", "instagram": "Coca-Cola", "linkedin": "Bottle", "email": "1.5l"}}');
+
+INSERT INTO EMPLOYEE(ID, TITLE, NAME, SURNAME, EMPLOYEE_TITLE, BIO, IMAGE_NAME, ADDRESS_ID, DEPARTMENT_ID,  CATEGORY_ID, EXTENSION)
+VALUES (uuid_generate_v4(), 'Ms','Fridah', 'Moraa', 'ADMIN ATTACHÈ', 'Administration', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1541939384/fridah_khc_kl_f9msdf.png  ', 1, 1, 1, '{"data":{ "facebook": "Fanta Orange", "instagram": "Coca-Cola", "linkedin": "Bottle", "email": "1.5l"}}');
