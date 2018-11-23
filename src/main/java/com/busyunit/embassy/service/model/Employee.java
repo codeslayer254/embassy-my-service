@@ -63,7 +63,7 @@ public class Employee implements Serializable {
     @Column(name = "IMAGE_NAME")
     private String imageName;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "ADDRESS_ID")
     private Address address;
 
