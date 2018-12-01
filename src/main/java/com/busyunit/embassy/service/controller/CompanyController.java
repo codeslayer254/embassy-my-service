@@ -28,7 +28,6 @@ public class CompanyController {
     public CompanyController(final CompanyService companyService) {
         this.companyService = companyService;
     }
-    
 
     @GetMapping
     public ResponseEntity<Resources<CompanyResource>> all() {

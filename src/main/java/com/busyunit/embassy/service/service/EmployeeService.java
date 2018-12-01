@@ -1,6 +1,5 @@
 package com.busyunit.embassy.service.service;
 
-import com.busyunit.embassy.service.model.Company;
 import com.busyunit.embassy.service.model.Employee;
 
 import java.util.List;

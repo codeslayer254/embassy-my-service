@@ -1,7 +1,5 @@
 package com.busyunit.embassy.service.repository;
 
-import com.busyunit.embassy.service.model.Company;
-import com.busyunit.embassy.service.model.Company_;
 import com.busyunit.embassy.service.model.Employee;
 import com.busyunit.embassy.service.model.Employee_;
 import org.springframework.dao.support.DataAccessUtils;
