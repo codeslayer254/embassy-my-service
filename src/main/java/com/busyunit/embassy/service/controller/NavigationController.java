@@ -1,24 +1,20 @@
 package com.busyunit.embassy.service.controller;
 
 import com.busyunit.embassy.service.model.Navigation;
-import com.busyunit.embassy.service.service.EmployeeService;
+import com.busyunit.embassy.service.resource.ArticleResource;
 import com.busyunit.embassy.service.service.NavigationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PagedResourcesAssembler;
-import org.springframework.hateoas.EntityLinks;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
-import org.springframework.http.HttpHeaders;
+import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
@@ -28,15 +24,21 @@ public class NavigationController {
     @Autowired
     private  NavigationService navigationService;
 
-    @GetMapping
-    public ResponseEntity<PagedResources<Navigation>> AllPages(Pageable pageable, PagedResourcesAssembler assembler){
-        Page<Navigation> products = navigationService.getAllPages(pageable);
-        PagedResources<Navigation> pr = assembler.toResource(products,linkTo(NavigationController.class).withSelfRel());
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.OK)
+    public @ResponseBody
+    Navigation get(@PathVariable Long id) {
+        return navigationService.get(id);
+    }
 
-        log.info("products.getTotalPages   {}", products.getTotalPages());
-        HttpHeaders responseHeaders = new HttpHeaders();
-        responseHeaders.add("Link",createLinkHeader(pr));
-        return new ResponseEntity<>(assembler.toResource(products,linkTo(NavigationController.class).withSelfRel()),responseHeaders,HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity<Resources<ArticleResource>> allArticles() {
+        final List<ArticleResource> collection =
+                navigationService.findAll().stream().map(ArticleResource::new).collect(Collectors.toList());
+        final Resources<ArticleResource> resources = new Resources<>(collection);
+        final String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
+        resources.add(new Link(uriString, "self"));
+        return ResponseEntity.ok(resources);
     }
 
     private String createLinkHeader(PagedResources<Navigation> pr){

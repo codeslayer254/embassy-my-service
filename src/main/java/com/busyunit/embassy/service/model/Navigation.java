@@ -9,6 +9,7 @@ import lombok.Setter;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -17,7 +18,7 @@ import java.util.Date;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class Navigation {
+public class Navigation implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

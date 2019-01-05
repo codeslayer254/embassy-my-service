@@ -19,7 +19,7 @@ public class EmployeeResource extends ResourceSupport {
     public EmployeeResource(Employee employee) {
         this.employee = employee;
         final UUID id = employee.getId();
-        add(linkTo(EmployeeController.class).withRel("/api/v1/staff"));
+        //add(linkTo(EmployeeController.class).withRel("/api/v1/staff"));
         add(linkTo(methodOn(EmployeeController.class).get(id)).withSelfRel());
     }
 }

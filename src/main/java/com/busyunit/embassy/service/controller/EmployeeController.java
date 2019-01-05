@@ -1,6 +1,7 @@
 package com.busyunit.embassy.service.controller;
 
 import com.busyunit.embassy.service.model.Employee;
+import com.busyunit.embassy.service.resource.EmployeeResource;
 import com.busyunit.embassy.service.resource.EmployeesResource;
 import com.busyunit.embassy.service.service.EmployeeService;
 import org.springframework.hateoas.Link;
@@ -10,10 +11,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
@@ -28,26 +31,26 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-   /* @GetMapping
-    public ResponseEntity<Resources<EmployeeResource>> all() {
+   @GetMapping
+    public ResponseEntity<Resources<EmployeeResource>> allStaff() {
         final List<EmployeeResource> collection =
                 employeeService.getAll().stream().map(EmployeeResource::new).collect(Collectors.toList());
         final Resources<EmployeeResource> resources = new Resources<>(collection);
         final String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
         resources.add(new Link(uriString, "self"));
         return ResponseEntity.ok(resources);
-    }*/
+    }
 
 
-    @GetMapping
-    public ResponseEntity<Resources<EmployeesResource>> getAllCustomers() {
+   /* @GetMapping
+    public ResponseEntity<Resources<EmployeesResource>> getAllStaff() {
 
         final List<Employee> allEmployees = new ArrayList<>(employeeService.getAll());
         Link link = linkTo(EmployeeController.class).withSelfRel();
 
         final Resources<EmployeesResource> resources = new Resources(allEmployees, link);
         return ResponseEntity.ok(resources);
-    }
+    }*/
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
