@@ -3,6 +3,7 @@ package com.busyunit.embassy.service.model;
 
 import com.busyunit.embassy.service.model.security.Authority;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +24,7 @@ public class Navigation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
-    private Long id = null;
+    private Long id;
 
     @Column(name = "TITLE", nullable = false)
     private String title;
@@ -48,9 +49,9 @@ public class Navigation implements Serializable {
     @Column(name="DATE_PUBLISHED", nullable = false)
     private Date datePublished = new Date();
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "NAVIGATION_CATEGORIES", joinColumns = @JoinColumn(name = "NAVIGATION_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "PAGE_CATEGORY_ID", referencedColumnName = "ID"))
     @OrderBy
-    @JsonIgnore
+    @JsonManagedReference
     private Collection<PageCategory> categories;
 }
