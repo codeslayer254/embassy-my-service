@@ -28,7 +28,5 @@ public class ArticleResource extends ResourceSupport {
         this.navigation = navigation;
         final Integer id = navigation.getId();
         add(linkTo(methodOn(NavigationController.class).getArticle(id)).withSelfRel());
-        //add(linkTo(EmployeeController.class).withRel("/api/v1/staff"));
-       // add(linkTo(methodOn(NavigationController.;
     }
 }

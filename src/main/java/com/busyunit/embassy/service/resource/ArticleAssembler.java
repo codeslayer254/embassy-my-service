@@ -27,10 +27,10 @@ public class ArticleAssembler extends ResourceAssemblerSupport<Navigation, Artic
 
         ArticleResource articleResource = new ArticleResource(navigation);
 
-        Link selfLink = linkTo(
+       /* Link selfLink = linkTo(
                 methodOn(NavigationController.class).getArticle(navigation.getId()))
                 .withSelfRel();
-        articleResource.add(selfLink);
+        articleResource.add(selfLink);*/
 
         return articleResource;
     }
