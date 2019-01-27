@@ -24,7 +24,7 @@ public class Navigation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
-    private Long id;
+    private Integer id;
 
     @Column(name = "TITLE", nullable = false)
     private String title;

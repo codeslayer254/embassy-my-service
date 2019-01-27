@@ -30,7 +30,7 @@ public class NavigationServiceImpl implements NavigationService {
     @Override
     @Transactional(readOnly = true)
     @PreAuthorize("hasAuthority('COMPANY_READ') and hasAuthority('DEPARTMENT_READ')")
-    public Navigation get(Long id) {
+    public Navigation get(Integer id) {
         return pageRepository.findOne(id.intValue());
     }
 

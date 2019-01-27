@@ -12,7 +12,7 @@ public interface NavigationService {
 
     Page<Navigation> getAllPages(Pageable pageable);
 
-    Navigation get(Long id);
+    Navigation get(Integer id);
 
     List<Navigation> findAll();
 }

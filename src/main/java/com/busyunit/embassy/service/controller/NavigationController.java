@@ -1,14 +1,20 @@
 package com.busyunit.embassy.service.controller;
 
 import com.busyunit.embassy.service.model.Navigation;
+import com.busyunit.embassy.service.resource.ArticleAssembler;
 import com.busyunit.embassy.service.resource.ArticleResource;
 import com.busyunit.embassy.service.service.NavigationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resources;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -21,14 +27,23 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "/api/v1/articles", produces = "application/hal+json")
 public class NavigationController {
 
-    @Autowired
+
     private  NavigationService navigationService;
 
+    private ArticleAssembler articleAssembler;
+
+    @Autowired
+    public NavigationController(NavigationService navigationService) {
+        this.navigationService = navigationService;
+        this.articleAssembler = new ArticleAssembler();
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    @ResponseStatus(value = HttpStatus.OK)
-    public @ResponseBody
-    Navigation get(@PathVariable Long id) {
-        return navigationService.get(id);
+    public ResponseEntity<ArticleResource> getArticle(@PathVariable Integer id) {
+
+        Navigation navigation =  navigationService.get(id);
+        ArticleResource resource = articleAssembler.toResource(navigation);
+        return new ResponseEntity<>(resource, HttpStatus.OK);
     }
 
     @GetMapping
@@ -39,6 +54,13 @@ public class NavigationController {
         final String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
         resources.add(new Link(uriString, "self"));
         return ResponseEntity.ok(resources);
+    }
+
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE}, value = "/books")
+    public HttpEntity<PagedResources<Navigation>> readAll(Pageable pageable,
+                                                    PagedResourcesAssembler assembler) {
+        Page<Navigation> books = navigationService.getAllPages(pageable);
+        return new ResponseEntity<>(assembler.toResource(books), HttpStatus.OK);
     }
 
     private String createLinkHeader(PagedResources<Navigation> pr){
