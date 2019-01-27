@@ -56,7 +56,7 @@ public class NavigationController {
         return ResponseEntity.ok(resources);
     }
 
-    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE}, value = "/books")
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE}, value = "/pages")
     public HttpEntity<PagedResources<Navigation>> readAll(Pageable pageable,
                                                     PagedResourcesAssembler assembler) {
         Page<Navigation> books = navigationService.getAllPages(pageable);
