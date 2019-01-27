@@ -84,7 +84,7 @@ INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (29, 'staff');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (30, 'relations');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (31, 'visas');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (32, 'visitke');
-INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (33, 'register');
+INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (33, 'latest');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (34, 'services');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (35, 'trade');
 INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (36, 'unsdg');
@@ -103,7 +103,7 @@ VALUES
   <p>"The win at the ongoing ITU Plenipotentiary Conference in Dubai, United Arab Emirates is a stamp of confidence in the credibility and goodwill that Kenya enjoys in the global ICT community and her outstanding leadership in the development of ICT services," the Communications Authority of Kenya said in a statement.</p>
 <p>ICT cabinet secretary Joe Mucheru led the country’s campaigns for the coveted seat at the council. Kenya joined the ITU Council in 1982 when it hosted the ITU Plenipotentiary Conference and has remained a member since then.</p>
   <p>The victory is the second major win for Kenya in the sector this year after John Omo was elected the African Telecommunications Union (ATU) Secretary-General in August this year.</p>',
-  '<a href="https://www.the-star.co.ke/news/2018/11/05/kenya-elected-to-global-ict-council_c1845951" target="_blank">The Star</a>', TRUE, 2, '2018-11-05 18:36:38'),
+  '<a href="https://www.the-star.co.ke/news/2018/11/05/kenya-elected-to-global-ict-council_c1845951" target="_blank">The Star</a>', TRUE, 33, '2018-11-05 18:36:38'),
   (2,  'Kenyan Gov’t to Use Blockchain in New Affordable Housing Project', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325988/kenya_map_nnd2cy.jpg',
    'Kenya is one of Africa’s leading countries regarding blockchain and cryptocurrency development.',
   '<p>The Kenyan government plans to leverage blockchain technology for the distribution of new government-funded housing units, according to reports from local news outlet the <a href="https://www.the-star.co.ke/news/2018/10/16/state-to-use-blockchain-tech-to-distribute-cheaper-houses_c1835153" target="_blank">Star</a>.</p>
@@ -119,7 +119,7 @@ VALUES
 <p>Active legislative discussions over blockchain and cryptocurrency related programs show the interest that the Kenyan government has in blockchain technology. This is evident in the government’s effort towards finding proper regulatory frameworks for the technology over time. In August 2018, the country’s electoral <a href="https://www.ccn.com/kenyas-electoral-commission-to-adopt-blockchain-for-enhanced-vote-integrity/">commision</a> even showed signs of adopting blockchain technology in voting processes.</p>
 <p>Speaking to the BBC in May, Information Minister Joseph Mucheru <a href="https://www.bbc.com/news/world-africa-43640885">confirmed</a> that the country is looking into deploying blockchain technology in the country’s land registry.</p>
 <p>Under the framework, Kenya’s notoriously porous land registry database will be recorded on a blockchain, effectively making it impervious to fraudulent changes that corrupt officials currently effect in exchange for a bribe.</p>',
-  '<a href="https://www.ccn.com/kenyan-government-to-use-blockchain-to-distribute-affordable-housing/" target="_blank">BLOCKCHAIN NEWS</a>', TRUE, 2, '2018-10-16 13:36:38'),
+  '<a href="https://www.ccn.com/kenyan-government-to-use-blockchain-to-distribute-affordable-housing/" target="_blank">BLOCKCHAIN NEWS</a>', TRUE, 33, '2018-10-16 13:36:38'),
   (3,  'Kenya Drafts Law to Protect Consumer Data', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325987/data_megrhd.jpg',
    'Kenya is setting up a National Integrated Identity Management System to centralise citizens’ data.',
   '<p>Kenya’s ICT Ministry has drafted a Bill to create safeguards for data held by companies and government agencies in the midst of growing concerns about the safety of personal data.</p></div><div><p>The Kenya Data Protection Bill 2018 lays down rules on how personal information can be collected, used, shared and stored by data handlers, and prescribes a fine of $50,000 or a five-year jail term for those who contravene the provisions.</p>
@@ -127,7 +127,7 @@ VALUES
   <p>“A data controller or data processor shall bear the burden of proof for establishing a data subject’s consent to the processing of his personal data for a specified purpose,” the draft states.</p>
 <p>Common elements of modern data protection and privacy laws such as liability of data controllers and endorses the right to correction or to be forgotten, allowing individuals to demand correction or deletion of their data by an agency, are included in the draft.</p>
   <p>Rafe Mazer, regulation lead at FSD Kenya, said the Bill is comprehensive and favours the consumer. “If approved, it will ensure proper data protection in Kenya,” he said.</p>',
-  '<a href="https://www.theeastafrican.co.ke/news/ea/Kenya-drafts-law-to-protect-consumer-data/4552908-4718632-6yhhd3z/index.html" target="_blank">The East African</a>', TRUE, 2, '2018-08-14 15:36:38'),
+  '<a href="https://www.theeastafrican.co.ke/news/ea/Kenya-drafts-law-to-protect-consumer-data/4552908-4718632-6yhhd3z/index.html" target="_blank">The East African</a>', TRUE, 33, '2018-08-14 15:36:38'),
   (4,  'Nopia Ride Electric Cab Commences Operations In Nairobi', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325988/nopia-electric-car_jdkcmj.jpg',
    'The use of electric cars allows the company to charge less, pay the drivers more and protect the environment.',
   '<p> Juha Suojanen is the CEO and founder of Ekorent which initially started as an electric car rental app in Helsinki. He’s in Nairobi promoting the firm’s new ride sharing company, Nopia Ride. Hailed as an ‘eco-Uber’, the service wants to break into the city’s competitive taxi market by offering zero-emission rides at lower rates.</p>
@@ -187,9 +187,9 @@ VALUES
 
 
 /*INSERT NAVIGATION_CATEGORIES*/
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (1, 2);
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (2, 2);
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (3, 2);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (1, 33);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (2, 33);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (3, 33);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (4, 2);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (5, 2);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (6, 12);
