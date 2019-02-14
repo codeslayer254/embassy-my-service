@@ -44,6 +44,17 @@ VALUES (uuid_generate_v4(), 'Ms','Ruth', 'Kitonyi', 'FIRST SECRETARY', 'First Se
 INSERT INTO EMPLOYEE(ID, TITLE, NAME, SURNAME, EMPLOYEE_TITLE, BIO, IMAGE_NAME, ADDRESS_ID, DEPARTMENT_ID,  CATEGORY_ID, EXTENSION)
 VALUES (uuid_generate_v4(), 'Ms','Fridah', 'Moraa', 'ADMIN ATTACHÈ', 'Administration', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1541939384/fridah_khc_kl_f9msdf.png  ', 1, 1, 1, '{"data":{ "facebook": "Fanta Orange", "instagram": "Coca-Cola", "linkedin": "Bottle", "email": "1.5l"}}');
 
+/*INSERT EVENT DETAILS*/
+INSERT INTO EVENT(ID, TITLE, START_DATE, END_DATE, BODY, EXTENSION, DATE_PUBLISHED, WEBSITE,  LOCATION, EVENT_BANNER)
+VALUES (uuid_generate_v4(), 'Sustainable Blue Economy Conference: Helping the world harness its blue potential','2018-11-26 07:00:00', '2018-11-28 19:00:00',
+  '<p>Kenya and its co-hosts Canada and Japan are inviting the world to Nairobi for the first global conference on the sustainable blue economy.</p>
+    <p>The Sustainable Blue Economy Conference is the first global conference on the sustainable blue economy. Over 4,000 participants from around the world are coming together to learn how to build a blue economy that:</p>
+    <ol><li><strong>1. Harnesses the potential of our oceans, seas, lakes and rivers to improve the lives of all, particularly people in developing states, women, youth and Indigenous peoples</strong></li>
+<li><strong>2. Leverages the latest innovations, scientific advances and best practices to build prosperity while conserving our waters for future generations</strong></li></ol>',
+'{"data":{ "https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543156789/logo_preview_x1n8jq.png": "Sustainable Blue Economy Conference 2018"}}',
+'2018-11-26 18:36:38', 'http://www.blueeconomyconference.go.ke/',
+'Kenyatta International Convention Centre (KICC)', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543156789/logo_preview_x1n8jq.png');
+
 
 /*INSERT OFFICE DETAILS*/
 INSERT INTO OFFICE(ID, NAME, ADDRESS_ID, DEPARTMENT_ID) VALUES (1, 'Office of S&M Boston', 4, 1);
@@ -183,7 +194,12 @@ VALUES
   <p>In addition, they will be required to interview public sector players (such as government, judiciary, financial services sector regulators and other relevant stakeholders) on actions that can be taken to enhance efficiency of the business and regulatory environment.</p>
 <p>The NIFC is an operating framework managed by the NIFCA which is meant to facilitate and support the development of an efficient and competitive financial sector in Kenya.</p>
   <p>Vision 2030 envisages the NIFC as a catalyst for Kenya to gain a stronger presence in sub-Saharan Africa’s growing financial services market.Interested bidders have up to 27 November 2018 to submit their completed RFP documents in the tender box provided at the Treasury building.</p>',
-  '<a href="https://kenyanwallstreet.com/nairobi-international-financial-centre-takes-shape-as-government-opens-bids-for-key-consultants/" target="_blank">The Kenyan Wall Street</a>', TRUE, 2, '2018-11-03 15:36:38');
+  '<a href="https://kenyanwallstreet.com/nairobi-international-financial-centre-takes-shape-as-government-opens-bids-for-key-consultants/" target="_blank">The Kenyan Wall Street</a>', TRUE, 2, '2018-11-03 15:36:38'),
+  (11, 'High Commisison Welcomes New High Commissioner', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1550113541/balozi_arrival_feb_pk6fd8.jpg',
+   'Kenya’s newly appointed High Commissioner arrives in Kuala Lumpur',
+  '<p> Kenya’s High Commissioner designate to Malaysia H.E Francis Ndewgwa Muhoro arrived on 12th Feb in Kuala Lumpur. </p>
+  <p>Muhoro was received at KLIA by Malaysia government officials and the Embassy staff.</p>',
+  '<a href="http://www.kenyahighcom.org.my/article/11" target="_blank">Kenya High Commission, KL</a>', TRUE, 33, '2019-02-13 15:36:38');
 
 
 /*INSERT NAVIGATION_CATEGORIES*/
@@ -197,6 +213,7 @@ INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (7, 13
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (8, 38);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (9, 38);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (10, 6);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (10, 33);
 
 /*INSERT API USER AUTHENTICATION DETAILS*/
 INSERT INTO OAUTH_CLIENT_DETAILS(CLIENT_ID, RESOURCE_IDS, CLIENT_SECRET, SCOPE, AUTHORIZED_GRANT_TYPES, AUTHORITIES, ACCESS_TOKEN_VALIDITY, REFRESH_TOKEN_VALIDITY)

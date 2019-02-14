@@ -17,7 +17,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -42,6 +41,7 @@ public class Employee implements Serializable {
                     )
             }
     )
+
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
 

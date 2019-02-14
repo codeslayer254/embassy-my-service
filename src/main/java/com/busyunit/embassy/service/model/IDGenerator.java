@@ -25,7 +25,7 @@ public class IDGenerator implements UUIDGenerationStrategy {
                     return (UUID) resultSet.getObject(1);
                 }
             }
-            throw new IllegalArgumentException("Can't fetch a new UUID GODAMNIT!");
+            throw new IllegalArgumentException("Can't fetch a new UUID GODDAMNIT!");
         });
     }
 }

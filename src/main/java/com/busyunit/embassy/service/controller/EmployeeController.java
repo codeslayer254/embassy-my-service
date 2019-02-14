@@ -4,6 +4,7 @@ import com.busyunit.embassy.service.model.Employee;
 import com.busyunit.embassy.service.resource.EmployeeResource;
 import com.busyunit.embassy.service.resource.EmployeesResource;
 import com.busyunit.embassy.service.service.EmployeeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -21,7 +22,15 @@ import java.util.stream.Collectors;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
+/**
+ * {@code EmployeeController} exposes employee service.
+ * <p/>
+ *
+ * @author Ram Ayall
+ * @since 21/11/18
+ */
 @RestController
+@Slf4j
 @RequestMapping(value = "/api/v1/staff", produces = "application/hal+json")
 public class EmployeeController {
 

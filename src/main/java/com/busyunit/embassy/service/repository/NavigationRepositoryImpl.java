@@ -24,6 +24,7 @@ public class NavigationRepositoryImpl implements NavigationRepository {
         CriteriaQuery<Navigation> query = builder.createQuery(Navigation.class);
         Root<Navigation> root = query.from(Navigation.class);
         query.select(root).distinct(true);
+        query.orderBy(builder.desc(root.get("datePublished")));
         TypedQuery<Navigation> allQuery = entityManager.createQuery(query);
         return allQuery.getResultList();
     }
