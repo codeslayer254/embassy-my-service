@@ -38,10 +38,6 @@ public class EventResource extends ResourceSupport {
 
     public EventResource(Event event) {
         this.event = event;
-
-        final UUID id = event.getId();
-        add(linkTo(methodOn(EventController.class).read(id)).withSelfRel());
-
-      //  add(linkTo(methodOn(EventController.class).read(event.getId())).withSelfRel());
+        add(linkTo(methodOn(EventController.class).read(event.getId())).withSelfRel());
     }
 }

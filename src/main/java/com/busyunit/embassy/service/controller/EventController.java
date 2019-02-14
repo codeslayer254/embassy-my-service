@@ -54,15 +54,21 @@ public class EventController {
         this.eventAssembler = new EventAssembler();
     }
 
-  /*  @GetMapping
+    /**
+     *Retrieves all events pagonated.
+     *
+     * @return EventResource
+     */
+   @GetMapping
     public ResponseEntity<Resources<EventResource>> allEventsWithId() {
         final List<EventResource> collection =
                 service.getEvents().stream().map(EventResource::new).collect(Collectors.toList());
         final Resources<EventResource> resources = new Resources<>(collection);
         final String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
         resources.add(new Link(uriString, "self"));
+
         return ResponseEntity.ok(resources);
-    }*/
+    }
 
 
 
@@ -75,7 +81,7 @@ public class EventController {
     }
 
     /**
-     * Retrieves all books by manually creating self link.
+     * Retrieves all events by manually creating self link.
      *
      * @param pageable
      * @param assembler
@@ -109,9 +115,9 @@ public class EventController {
         return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
-       @GetMapping
+      /* @GetMapping
         public HttpEntity<PagedResources<Event>> allEvents(Pageable pageable, PagedResourcesAssembler assembler) {
         Page<Event> events = service.getEvents(pageable);
         return new ResponseEntity<>(assembler.toResource(events), HttpStatus.OK);
-    }
+    }*/
 }

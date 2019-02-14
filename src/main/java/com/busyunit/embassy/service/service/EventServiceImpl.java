@@ -46,7 +46,7 @@ public class EventServiceImpl implements EventService {
     }
 
     public List<Event> getPage(int pageNumber) {
-        PageRequest request = new PageRequest(pageNumber - 1, PAGESIZE, Sort.Direction.ASC, "id");
+        PageRequest request = new PageRequest(pageNumber - 1, PAGESIZE, Sort.Direction.ASC, "datePublished");
         return eventRepository.findAll(request).getContent();
     }
 
@@ -61,7 +61,7 @@ public class EventServiceImpl implements EventService {
     @Transactional
     @PreAuthorize("hasAuthority('COMPANY_UPDATE')")
     public Employee update(Employee employee) {
-        return eventRepository.update(employee);
+        return eventRepository.update(employee);x
     }
 
     @Override

@@ -24,15 +24,6 @@ public class EventAssembler extends ResourceAssemblerSupport<Event, EventResourc
 
     @Override
     public EventResource toResource(Event event) {
-        EventResource resource = new EventResource(event);
-
-       // Link selfLink = linkTo(
-           //     methodOn(EventController.class).read(event.getId()))
-             //   .withSelfRel();
-      //  resource.add(selfLink);
-
-        add(linkTo(methodOn(EventController.class).read(event.getId())).withSelfRel());
-
-        return resource;
+        return new EventResource(event);
     }
 }
