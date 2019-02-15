@@ -107,7 +107,7 @@ INSERT INTO PAGE_CATEGORY(ID, NAME) VALUES (39, '403');
 /*INSERT NAVIGATION PAGE CONTENT*/
 INSERT INTO NAVIGATION(ID, TITLE, IMAGE_NAME, DESCRIPTION, BODY, WRITER, ENABLED, PAGE_CATEGORY_ID, DATE_PUBLISHED)
 VALUES
-(1,  'Kenya Elected to Global ICT Council', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325954/cabinet_sec_ict_tsb4js.png',
+(1, 'Kenya Elected to Global ICT Council', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325954/cabinet_sec_ict_tsb4js.png',
    'Kenya scooped the seat at the council after garnering 140 votes',
   '<p> Kenya has been re-elected to the International Telecommunication Union Council, a key decision making organ of the UN specialized agency for ICTs. </p>
   <p>Kenya scooped the seat at the council after garnering 140 votes in a close election that saw Algeria and Morroco receive 134 and 133 votes respectively. The country will be among 13 nations that will represent Africa at the global ICT council.</p>
@@ -115,7 +115,7 @@ VALUES
 <p>ICT cabinet secretary Joe Mucheru led the country’s campaigns for the coveted seat at the council. Kenya joined the ITU Council in 1982 when it hosted the ITU Plenipotentiary Conference and has remained a member since then.</p>
   <p>The victory is the second major win for Kenya in the sector this year after John Omo was elected the African Telecommunications Union (ATU) Secretary-General in August this year.</p>',
   '<a href="https://www.the-star.co.ke/news/2018/11/05/kenya-elected-to-global-ict-council_c1845951" target="_blank">The Star</a>', TRUE, 33, '2018-11-05 18:36:38'),
-  (2,  'Kenyan Gov’t to Use Blockchain in New Affordable Housing Project', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325988/kenya_map_nnd2cy.jpg',
+  (2, 'Kenyan Gov’t to Use Blockchain in New Affordable Housing Project', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325988/kenya_map_nnd2cy.jpg',
    'Kenya is one of Africa’s leading countries regarding blockchain and cryptocurrency development.',
   '<p>The Kenyan government plans to leverage blockchain technology for the distribution of new government-funded housing units, according to reports from local news outlet the <a href="https://www.the-star.co.ke/news/2018/10/16/state-to-use-blockchain-tech-to-distribute-cheaper-houses_c1835153" target="_blank">Star</a>.</p>
   p>The Kenyan National Housing Fund will finance the initiative under the Finance Act 2018, and it plans to create an efficient allocation of the houses to those who need it using the distributed ledger technology.</p>
@@ -131,14 +131,6 @@ VALUES
 <p>Speaking to the BBC in May, Information Minister Joseph Mucheru <a href="https://www.bbc.com/news/world-africa-43640885">confirmed</a> that the country is looking into deploying blockchain technology in the country’s land registry.</p>
 <p>Under the framework, Kenya’s notoriously porous land registry database will be recorded on a blockchain, effectively making it impervious to fraudulent changes that corrupt officials currently effect in exchange for a bribe.</p>',
   '<a href="https://www.ccn.com/kenyan-government-to-use-blockchain-to-distribute-affordable-housing/" target="_blank">BLOCKCHAIN NEWS</a>', TRUE, 33, '2018-10-16 13:36:38'),
-  (3,  'Kenya Drafts Law to Protect Consumer Data', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325987/data_megrhd.jpg',
-   'Kenya is setting up a National Integrated Identity Management System to centralise citizens’ data.',
-  '<p>Kenya’s ICT Ministry has drafted a Bill to create safeguards for data held by companies and government agencies in the midst of growing concerns about the safety of personal data.</p></div><div><p>The Kenya Data Protection Bill 2018 lays down rules on how personal information can be collected, used, shared and stored by data handlers, and prescribes a fine of $50,000 or a five-year jail term for those who contravene the provisions.</p>
-  <p>Data controllers will have to seek an individual’s consent before collecting, processing, sharing or storing their data, and inform them about the cost, intended purpose, extent and period of use. </p>
-  <p>“A data controller or data processor shall bear the burden of proof for establishing a data subject’s consent to the processing of his personal data for a specified purpose,” the draft states.</p>
-<p>Common elements of modern data protection and privacy laws such as liability of data controllers and endorses the right to correction or to be forgotten, allowing individuals to demand correction or deletion of their data by an agency, are included in the draft.</p>
-  <p>Rafe Mazer, regulation lead at FSD Kenya, said the Bill is comprehensive and favours the consumer. “If approved, it will ensure proper data protection in Kenya,” he said.</p>',
-  '<a href="https://www.theeastafrican.co.ke/news/ea/Kenya-drafts-law-to-protect-consumer-data/4552908-4718632-6yhhd3z/index.html" target="_blank">The East African</a>', TRUE, 33, '2018-08-14 15:36:38'),
   (4,  'Nopia Ride Electric Cab Commences Operations In Nairobi', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543325988/nopia-electric-car_jdkcmj.jpg',
    'The use of electric cars allows the company to charge less, pay the drivers more and protect the environment.',
   '<p> Juha Suojanen is the CEO and founder of Ekorent which initially started as an electric car rental app in Helsinki. He’s in Nairobi promoting the firm’s new ride sharing company, Nopia Ride. Hailed as an ‘eco-Uber’, the service wants to break into the city’s competitive taxi market by offering zero-emission rides at lower rates.</p>
@@ -154,7 +146,7 @@ VALUES
   <p>The new partnerships are seen as a quick result of Kenya’s desire to shift away from pure debt financing with new emphasis being placed on Public Private Partnerships and the need to explore innovative off-balance sheet financing for the country’s infrastructure needs.</p>
 <p>The revelations came on a day that President Uhuru Kenyatta and his Chinese counterpart, President Xi Jinping witnessed signing of more deals between Kenya and China.</p>
   <p>The agreements were signed at the Great Hall of the People where the two leaders held bilateral talks focusing on strengthening the comprehensive and strategic partnership existing between Kenya and China.</p>',
-  '<a href="https://www.capitalfm.co.ke/news/2018/09/big-win-for-kenya-as-chinese-private-investors-line-up-for-public-partnerships/" target="_blank">Capital News</a>', TRUE, 2, '2018-09-04 15:36:38'),
+  '<a href="https://www.capitalfm.co.ke/news/2018/09/big-win-for-kenya-as-chinese-private-investors-line-up-for-public-partnerships/" target="_blank">Capital News</a>', TRUE, 33, '2018-09-04 15:36:38'),
   (6,  'Nairobi makes UN list of 4 top investment cities in Africa', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/v1543327254/UN-Report-on-FDI-in-Africa_870x331px_2_cnrdob.jpg',
    'Kenya’s FDI rose 71 per cent to Sh67 billion ($672 million) last year, according to UN Conference on Trade and Development (Unctad).',
   '<p>Nairobi is one of the four cities the United Nations has identified among top four African markets that attract highest foreign capital inflows, crucial to creating wealth.The UN-Habitat, in a report, says East Africa, led by Kenya’s capital, is set to record a sustained growth in foreign direct investment (FDI) in coming years.</p>
@@ -195,7 +187,7 @@ VALUES
 <p>The NIFC is an operating framework managed by the NIFCA which is meant to facilitate and support the development of an efficient and competitive financial sector in Kenya.</p>
   <p>Vision 2030 envisages the NIFC as a catalyst for Kenya to gain a stronger presence in sub-Saharan Africa’s growing financial services market.Interested bidders have up to 27 November 2018 to submit their completed RFP documents in the tender box provided at the Treasury building.</p>',
   '<a href="https://kenyanwallstreet.com/nairobi-international-financial-centre-takes-shape-as-government-opens-bids-for-key-consultants/" target="_blank">The Kenyan Wall Street</a>', TRUE, 2, '2018-11-03 15:36:38'),
-  (11, 'High Commisison Welcomes New High Commissioner', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1550164314/balozi_arrival_feb_2019_xcjbpq.jpg',
+  (3, 'High Commisison Welcomes New High Commissioner', 'https://res.cloudinary.com/dpnxlc0jh/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1550164314/balozi_arrival_feb_2019_xcjbpq.jpg',
    'Kenya’s newly appointed High Commissioner arrives in Kuala Lumpur',
   '<p> Kenya’s High Commissioner designate to Malaysia H.E Francis Ndewgwa Muhoro arrived on 12th Feb in Kuala Lumpur. </p>
   <p>Muhoro was received at KLIA by Malaysia government officials and the Embassy staff.</p>',
@@ -204,16 +196,15 @@ VALUES
 
 /*INSERT NAVIGATION_CATEGORIES*/
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (1, 33);
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (2, 38);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (2, 33);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (3, 33);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (4, 2);
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (5, 2);
+INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (5, 12);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (6, 12);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (7, 13);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (8, 38);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (9, 38);
 INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (10, 6);
-INSERT INTO NAVIGATION_CATEGORIES(NAVIGATION_ID, PAGE_CATEGORY_ID) VALUES (11, 33);
 
 /*INSERT API USER AUTHENTICATION DETAILS*/
 INSERT INTO OAUTH_CLIENT_DETAILS(CLIENT_ID, RESOURCE_IDS, CLIENT_SECRET, SCOPE, AUTHORIZED_GRANT_TYPES, AUTHORITIES, ACCESS_TOKEN_VALIDITY, REFRESH_TOKEN_VALIDITY)
